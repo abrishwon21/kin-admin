@@ -1,8 +1,10 @@
 import Home from "./Pages/Home/Home";
 import List from "./Pages/list/List";
+import TrackList from "./Pages/list/trackList";
 import Single from "./Pages/single/Single";
-import { productInputs, userInputs } from "./formSource";
+import { albumInput, artistInput } from "./formSource";
 import New from "./Pages/new/New";
+import EditArtistForm from './Pages/new/EditArtistForm'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { useContext } from "react";
@@ -21,13 +23,28 @@ function App() {
 
             <Route path="users">
               <Route index element={<List />} />
-              <Route path=":userId" element={<Single />} />
+              <Route path=":id" element={<EditArtistForm />} />
               <Route
                 path="new"
-                element={<New inputs={userInputs} title="Add New User" />}
+                element={<New inputs={artistInput} filetag="Profile" title="Add New User" />}
               />
             </Route>
-
+            <Route path="track">
+              <Route index element={<TrackList />} />
+              <Route path=":trackId" element={<Single />} />
+              <Route
+                path="new"
+                element={<New inputs={albumInput} filetag="Cover Image" title="Create Album" />}
+              />
+            </Route>
+            <Route path="track">
+              <Route index element={<trackList />} />
+              <Route path=":trackId" element={<Single />} />
+              <Route
+                path="new"
+                element={<New inputs={albumInput} filetag="Cover Image" title="Create Album" />}
+              />
+            </Route>
             
             
            

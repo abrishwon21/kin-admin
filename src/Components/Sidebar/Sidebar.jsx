@@ -37,7 +37,7 @@ const Sidebar = () => {
             <span>Dashboard</span>
           </li>
           <p className="title">LISTS</p>
-          <Link to="/users" style={{ textDecoration: "none" }}>
+          <Link to="/users" style={{ textDecoration: "none" }} className="sidebarli">
             <li>
               <AiOutlineUsergroupAdd className="icon"/>
               <span>Users</span>
@@ -49,10 +49,16 @@ const Sidebar = () => {
               <span>Artists</span>
             </li>
           </Link>
-          <Link to="/musics" style={{ textDecoration: "none" }}>
+          <Link to="/album" style={{ textDecoration: "none" }}>
             <li>
               <SiYoutubemusic className="icon"/>
-              <span>Musics</span>
+              <span>Album</span>
+            </li>
+          </Link>
+          <Link to="/track" style={{ textDecoration: "none" }}>
+            <li>
+              <SiYoutubemusic className="icon"/>
+              <span>Track</span>
             </li>
           </Link>
 

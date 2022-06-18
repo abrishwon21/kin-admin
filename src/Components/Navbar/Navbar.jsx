@@ -10,6 +10,7 @@ import { GrLanguage } from 'react-icons/gr';
 import { MdDarkMode } from 'react-icons/md';
 import {GrNotification} from 'react-icons/gr';
 import {BsChatDots} from 'react-icons/bs';
+import {AiOutlineSearch} from 'react-icons/ai';
 const Navbar = () => {
   const { dispatch } = useContext(DarkModeContext);
 
@@ -17,7 +18,8 @@ const Navbar = () => {
     <div className="navbar">
       <div className="wrapper">
         <div className="search">
-          <input type="text" placeholder="Search..." />
+          <input type="text" placeholder="search..." />
+          <AiOutlineSearch className="icon"/>
           
         </div>
         <div className="items">
